@@ -37,7 +37,7 @@
 <div class="loginbar">
    <font color="black"style="font-weight: bold;">কিতাপৰ প্ৰকাৰ :</font>  &nbsp 
 
-<select id="myInput" onchange="mySelectFunction(this.value)">
+<select id="myInput1" onchange="mySelectFunction(this.value)">
    <option value=""></option>
   <option value="ৰচনা সংকলন">ৰচনা সংকলন</option>
   <option value="উপন্যাস">উপন্যাস</option>
@@ -49,7 +49,7 @@
   <option value="উপদেশ মূলক ৰচনা">উপদেশ মূলক ৰচনা</option>
   <option value="ভ্ৰমণ মূলক ৰচনা">ভ্ৰমণ মূলক ৰচনা</option>
 </select>
-&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="কিতাপৰ নাম সন্ধান কৰক.." title="Type in a name">
 </div>
 
@@ -880,6 +880,7 @@
 
 
 <script>
+
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
@@ -938,6 +939,16 @@ function mySelectFunction(value) {
 }
 
 #myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+ 
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  border: 2px solid #1BC70D;
+ 
+}
+#myInput1 {
   background-image: url('/css/searchicon.png');
   background-position: 10px 12px;
   background-repeat: no-repeat;
