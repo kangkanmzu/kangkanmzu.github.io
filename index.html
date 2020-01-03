@@ -23,7 +23,7 @@
       <div class="head-meta">
       
         <span>কিতাপৰ কথা</span>
-        <span>2019-12-29</span>
+        <span>2020-01-04</span>
         
         
         
@@ -33,7 +33,25 @@
     </nav>
 
 
+
+<div class="loginbar">
+   <font color="black"style="font-weight: bold;">কিতাপৰ প্ৰকাৰ :</font>  &nbsp 
+
+<select id="myInput" onchange="mySelectFunction(this.value)">
+   <option value=""></option>
+  <option value="ৰচনা সংকলন">ৰচনা সংকলন</option>
+  <option value="উপন্যাস">উপন্যাস</option>
+  <option value="প্ৰবন্ধ সংকলন">প্ৰবন্ধ সংকলন</option>
+  <option value="জীৱনি মূলক ৰচনা">জীৱনি মূলক ৰচনা</option>
+  <option value="শিশু সাহিত্য">শিশু সাহিত্য</option>
+  <option value="গল্প সংকলন">গল্প সংকলন</option>
+  <option value="কবিতা">কবিতা</option>
+  <option value="উপদেশ মূলক ৰচনা">উপদেশ মূলক ৰচনা</option>
+  <option value="ভ্ৰমণ মূলক ৰচনা">ভ্ৰমণ মূলক ৰচনা</option>
+</select>
+&nbsp&nbsp&nbsp&nbsp&nbsp
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="কিতাপৰ নাম সন্ধান কৰক.." title="Type in a name">
+</div>
 
 <div class="container">
 <main class="list">
@@ -42,7 +60,7 @@
 	
 		<li>
 			<a href="#">
-		স্বৰ্গ আৰু নৰক/ হোমেন বৰগোহাঞি/  ৰচনা সংলন/ 1987
+		স্বৰ্গ আৰু নৰক/ হোমেন বৰগোহাঞি/  ৰচনা সংকলন/ 1987
 
 
 		</a>
@@ -878,6 +896,27 @@ function myFunction() {
         }
     }
 }
+
+function mySelectFunction(value) {
+    var input, filter, ul, li, a, i, txtValue;
+    input = value;           
+    filter = value;
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+
+
 </script>
 
 <style>
@@ -885,15 +924,28 @@ function myFunction() {
   box-sizing: border-box;
 }
 
+.loginbar {
+    width: 800px;
+    height: 70px;
+    box-sizing: border-box;
+    margin: auto auto;
+    display: flex;
+   
+    align-items: center;
+   
+    color: orange;
+   
+}
+
 #myInput {
   background-image: url('/css/searchicon.png');
   background-position: 10px 12px;
   background-repeat: no-repeat;
-  width: 100%;
+ 
   font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
+  padding: 10px 10px 10px 5px;
+  border: 2px solid #1BC70D;
+ 
 }
 
 #myUL {
@@ -903,7 +955,7 @@ function myFunction() {
 }
 
 #myUL li a {
-  border: 1px solid #ddd;
+  border: 1px solid #D7AC81;
   margin-top: -1px;  
   background-color: #f6f6f6;
   padding: 12px;
