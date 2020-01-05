@@ -70,15 +70,15 @@
 
 <select id="myInput1" onchange="mySelectFunction(this.value)">
    <option value=""></option>
-  <option value="ৰচনা সংকলন">ৰচনা সংকলন</option>
-  <option value="উপন্যাস">উপন্যাস</option>
-  <option value="প্ৰবন্ধ সংকলন">প্ৰবন্ধ সংকলন</option>
-  <option value="জীৱনি মূলক ৰচনা">জীৱনি মূলক ৰচনা</option>
-  <option value="শিশু সাহিত্য">শিশু সাহিত্য</option>
-  <option value="গল্প সংকলন">গল্প সংকলন</option>
-  <option value="কবিতা">কবিতা</option>
-  <option value="উপদেশ মূলক ৰচনা">উপদেশ মূলক ৰচনা</option>
-  <option value="ভ্ৰমণ মূলক ৰচনা">ভ্ৰমণ মূলক ৰচনা</option>
+   <option value="গল্প সংকলন Short Story Collection">গল্প সংকলন Short Story Collection</option>
+  <option value="কবিতা Poetry">কবিতা Poetry</option>
+   <option value="উপন্যাস Novel">উপন্যাস Novel</option>
+  <option value="প্ৰবন্ধ সংকলন Article Collection">প্ৰবন্ধ সংকলন Article Collection</option>
+  <option value="গদ্য Prose Collection">গদ্য Prose Collection</option>
+   <option value="জীৱনি Biography">জীৱনি Biography</option>
+  <option value="শিশু সাহিত্য Children's Literature">শিশু সাহিত্য Children's Literature</option>
+  <option value="বুৰঞ্জী History">বুৰঞ্জী History</option>
+  <option value="নাটক Drama">নাটক Drama</option>
 </select>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -16010,13 +16010,13 @@ function myFunction() {
 function mySelectFunction(value) {
     var input, filter, ul, li, a, i, txtValue;
     input = value;           
-    filter = value;
+    filter = value.toUpperCase();
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
-        if (txtValue.indexOf(filter) > -1) {
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
         } else {
             li[i].style.display = "none";
