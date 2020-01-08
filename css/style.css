@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  line-height: 1.5em;
+  line-height: 1.2em;
   background: #fafafa;
 }
 .header div, .container, .copyright, .menu {
@@ -27,7 +27,7 @@ main { margin-bottom: 15px; }
   justify-content: space-between;
 }
 .header, .list section, article { background: #fff; }
-.banner { font-size: 4em; }
+.banner { font-size: 2em; }
 .banner .text {
   display: block;
   line-height: 1em;
