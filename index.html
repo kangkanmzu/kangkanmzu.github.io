@@ -17,6 +17,8 @@
 
   </head>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
   <body>
     <nav class="header">
       <div class="banner">
@@ -20964,6 +20966,13 @@ War And Peace From India&#39;s Northeast
 	
 	
 </ul>
+
+<div  align="center">
+
+<button class="button button1" id="next">Show More</button> 
+</div>
+
+
 <nav>
 
 </nav>
@@ -20973,6 +20982,31 @@ War And Peace From India&#39;s Northeast
 
 
 <script>
+
+<!--For show more functionality , at loading show 50 book names    -->
+$(document).ready(function(){
+
+      var list = $(".list li");
+      var numToShow = 50;
+      var button = $("#next");
+      var numInList = list.length;
+      list.hide();
+      if (numInList > numToShow) {
+        button.show();
+      }
+      list.slice(0, numToShow).show();
+
+      button.click(function(){
+          var showing = list.filter(':visible').length;
+          list.slice(showing - 1, showing + numToShow).fadeIn();
+          var nowShowing = list.filter(':visible').length;
+          if (nowShowing >= numInList) {
+            button.hide();
+          }
+      });
+
+});
+
 
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
@@ -21082,5 +21116,32 @@ function mySelectFunction(value) {
     cursor:pointer;
     width: 0;
 }
+ 
+.button {
+  background-color: #4CAF50;  
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;  
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
 
 </style>
