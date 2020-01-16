@@ -85,10 +85,13 @@ article { padding: 1em; }
 .pagination li, .terms li { display: inline; }
 .pagination a { padding: 0 .2em; }
 .footer {
-  background: #666;
-  padding: 1em 0;
+  background: #80ff80;
+  padding: .5em 0;
 }
-.footer, .footer a { color: #fff; }
+.footer, .footer a
+ { color: #000000;
+font-size: 20px;
+}
 .copyright, .copyright a { color: #ccc; }
 .menu {
   margin-bottom: .5em;
