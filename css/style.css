@@ -17,9 +17,8 @@ main { margin-bottom: 15px; }
 
 /* header and footer areas */
 .header {
-  border-top: 5px solid #666;
-  border-bottom: 4px double #666;
-  text-align: center;
+ 
+    text-align: center;
   padding: 15px 0 5px;
 }
 .head-meta, .menu {
@@ -27,7 +26,7 @@ main { margin-bottom: 15px; }
   justify-content: space-between;
 }
 .header, .list section, article { background: #fff; }
-.banner { font-size: 2em; }
+.banner { font-size: 1.5em; }
 .banner .text {
   display: block;
   line-height: 1em;
@@ -85,7 +84,7 @@ article { padding: 1em; }
 .pagination li, .terms li { display: inline; }
 .pagination a { padding: 0 .2em; }
 .footer {
-  background: #80ff80;
+  //background: #80ff80;
   padding: .5em 0;
 }
 .footer, .footer a
