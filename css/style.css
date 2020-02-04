@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  line-height: 1.2em;
+  line-height: 1em;
   background: #fafafa;
 }
 .header div, .container, .copyright, .menu {
@@ -13,7 +13,7 @@ body {
 @media (max-width: 930px) {
   .page .container { padding: 0; }
 }
-main { margin-bottom: 15px; }
+main { //margin-bottom: 15px; }
 
 /* header and footer areas */
 .header {
@@ -89,12 +89,12 @@ article { padding: 1em; }
 }
 .footer, .footer a
  { color: #000000;
-font-size: 20px;
+font-size: 24px;
 }
 .copyright, .copyright a { color: #ccc; }
 .menu {
-  margin-bottom: .5em;
-  flex-wrap: wrap;
+  //margin-bottom: .5em;
+  //flex-wrap: wrap;
 }
 .menu li {
   display: inline-block;
@@ -174,4 +174,8 @@ tr:nth-child(even) { background: #eee }
 .footnotes hr {
   width: 50%;
   margin-left: 0;
+}
+.menuHover:hover {
+  background-color: #4CAF50;
+  opacity: 1;
 }

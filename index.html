@@ -53,11 +53,11 @@
 <div class="footer">
   <ul class="menu">
     
-    <li><a href="/"><span data-hover="Home">Home</span></a></li>
+    <li><a href="/"><span class="menuHover" data-hover="Home">Home</span></a></li>
     
-    <li><a href="/about/"><span data-hover="About">About</span></a></li>
+    <li><a href="/about/"><span class="menuHover" data-hover="About">About</span></a></li>
     
-    <li><a href="/index.xml"><span data-hover="Contact">Contact</span></a></li>
+    <li><a href="/index.xml"><span class="menuHover" data-hover="Contact">Contact</span></a></li>
     
   </ul>
 
@@ -24565,7 +24565,7 @@ bookList.filter(function (item) {
 
 var options = {
   valueNames: [ 'name', 'writer','category','date' ],
-	page: 50,
+	page: 20,
 	pagination: [{
     	outerWindow: 4
     	} ] 
@@ -24627,7 +24627,7 @@ $(function(){
   
   
   font-size: 16px;
-  padding: 10px 10px 10px 5px;
+  padding: 5px 10px 5px 5px;
   border: 2px solid #1BC70D;
   margin-bottom: 10px;
  
@@ -24638,7 +24638,7 @@ $(function(){
   
   width: 100%;
   font-size: 16px;
-  padding: 10px 10px 10px 5px;
+  padding: 5px 10px 5px 10px;
   border: 2px solid #1BC70D;
   
  
@@ -24655,9 +24655,9 @@ $(function(){
   border: 1px solid #D7AC81;
   margin-top: -1px;  
   background-color: #f6f6f6;
-  padding: 8px;
+  padding: 4px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
   color: black;
   display: block;
   width: 100%;
@@ -24681,7 +24681,7 @@ $(function(){
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
-margin-bottom: 15px;
+
 }
 
 .pagination {
@@ -24691,7 +24691,7 @@ margin-bottom: 15px;
 .pagination a {
   color: black;
   float: left;
-  padding: 8px 16px;
+  padding: 1px 10px;
   text-decoration: none;
   transition: background-color .3s;
   border: 1px solid #1BC70D;
@@ -24708,16 +24708,16 @@ margin-bottom: 15px;
 .pagination a:hover:not(.active) {background-color: #ddd;}
 
 
-#element1 {display:inline-block; width:20%; } 
-#element2 {display:inline-block; width:40%;} 
-#element3 {display:inline-block; width:39%;} 
+#element1 {display:inline-block; width:30%; } 
+#element2 {display:inline-block; width:34%;} 
+#element3 {display:inline-block; width:35%;} 
 
 
 .button {
   background-color: #4CAF50;  
   border: none;
   color: white;
-  padding: 9px 15px;
+  padding: 5px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
